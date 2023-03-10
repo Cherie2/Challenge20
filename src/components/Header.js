@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+import Navagation from './Navigation';
 
 // By importing the Header.css file, it is added to the DOM whenever this component loads
 
@@ -19,10 +20,10 @@ const styles = {
 
 // We use JSX curly braces to evaluate the style object
 
-function Header() {
+function Header({currentPage, handlePageChange}) {
   return (
     <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}>Cherie Walker</h1>
+      <Navagation currentPage={currentPage} handlePageChange={handlePageChange} />
     </header>
   );
 }
